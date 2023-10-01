@@ -58,7 +58,21 @@ img {
     pointer-events: none;
 }
 
+.demo-profile img{
+    pointer-events: all;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    transition: transform 500ms ease-in-out;
+}
 /* implemented media query for #home */
+.demo-profile img:hover{
+    transform: translateY(-10px);
+}
 
 #home {
     padding-top: 7rem;
@@ -243,6 +257,9 @@ nav {
     align-items: center;
     justify-content: space-between;
     gap: 2.5rem;
+}
+.nav-list ul :hover{
+    color: var(--red-primary);
 }
 
 .button {
@@ -480,6 +497,10 @@ nav {
 
 .contact-text a {
     text-decoration: underline;
+}
+
+.contact-text a:hover{
+    color: var(--red-primary);
 }
 
 footer {
